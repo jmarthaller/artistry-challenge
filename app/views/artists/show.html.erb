@@ -1,0 +1,19 @@
+<h1> Hey! Check out this artist! </h1>
+
+<h3>  <%= @artist.name %>  </h3>
+
+<h3>  <%= @artist.age %>  </h3>
+
+<h3>  <%= @artist.title %>  </h3>
+
+
+
+<h4> Instruments played by <%= @artist.name %> </h4>
+<ul>
+    <% @artist.sessions.each do |session| %>
+        
+        <li> <%=  session.instrument.name %> </li>
+        <br>
+    <% end%>
+
+</ul>

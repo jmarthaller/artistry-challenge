@@ -1,3 +1,9 @@
+puts "Destroying all Instances"
+Artist.destroy_all
+Instrument.destroy_all
+Session.destroy_all
+
+
 Artist.create(name: "Michael Jackson", age: rand(50), title: "King of Pop")
 Artist.create(name: "Stevie Wonder", age: rand(50), title: "Little Stevie Wonder")
 Artist.create(name: "Elvis Presley", age: rand(50), title: "the King")
@@ -8,3 +14,13 @@ Instrument.create(name: "Guitar", classification: "Strings")
 Instrument.create(name: "Violin", classification: "Strings")
 Instrument.create(name: "Flute", classification: "Woodwind")
 Instrument.create(name: "Xylophone", classification: "Percussion")
+
+Session.create(time: rand(1..24), artist_id: Artist.all.sample.id, instrument_id: Instrument.all.sample.id)
+Session.create(time: rand(1..24), artist_id: Artist.all.sample.id, instrument_id: Instrument.all.sample.id)
+Session.create(time: rand(1..24), artist_id: Artist.all.sample.id, instrument_id: Instrument.all.sample.id)
+Session.create(time: rand(1..24), artist_id: Artist.all.sample.id, instrument_id: Instrument.all.sample.id)
+Session.create(time: rand(1..24), artist_id: Artist.all.sample.id, instrument_id: Instrument.all.sample.id)
+Session.create(time: rand(1..24), artist_id: Artist.all.sample.id, instrument_id: Instrument.all.sample.id)
+
+
+puts "Data Seeded!"

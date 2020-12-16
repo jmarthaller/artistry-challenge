@@ -1,0 +1,15 @@
+<h1> Create a new Session between an Artist and an Instrument </h1>
+
+
+<%= form_for @session do |f| %>
+    <%= f.label :time %>
+    <%= f.number_field :time %>
+    <br>
+    <%= f.label :artist_id %>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name %>
+    <br>
+    <%= f.label :instrument_id %>
+    <%= f.collection_select :instrument_id, Instrument.all, :id, :name %>
+    <br>
+    <%= f.submit "Create Session" %>
+<% end %>
