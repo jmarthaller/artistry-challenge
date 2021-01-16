@@ -2,6 +2,11 @@
 
 
 
+<% if flash[:errors_array] %>
+  <% flash[:errors_array].each do |error| %>
+    <p style="color: red;"><%= error %></p>
+  <% end %>
+<% end %>
 
 <%= form_for @artist do |f| %>
     <%= f.label :name %>
@@ -15,3 +20,4 @@
     <br>
     <%= f.submit "Create A New Artist" %>
 <% end %>
+
